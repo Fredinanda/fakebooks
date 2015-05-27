@@ -173,46 +173,16 @@
 			</div>
 
 		</div>
-		<div id="navigation">
+			
+			<c:import url="/WEB-INF/views/include/navigation.jsp"></c:import>
 
-			<div
-				style="border: hidden; background-color: white; width: 200px; height: auto;">
-				<p style="float: left;">추천 친구</p>
-				<p style="float: left; margin-left: 60px">모두보기</p>
-
-				<table>
-					<tr>
-						<td style="padding-top: 20px; padding-bottom: 20px">[사진] 친구
-							이름<br>
-							<form action="">
-								<input type="button" value="친구 추가 하기">
-							</form>
-						</td>
-					</tr>
-
-
-				</table>
-
-			</div>
-
-		</div>
-
-		<div id="extra">
-			<p>
-				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 120px; height: 120px"><br> ${authMember.firstname } ${authMember.lastname }<br> <a href="timeline/profile" style="float: left; text-decoration: none; color: black;">프로필편집</a><br> <br> <img
-					src="/fakebooks/assets/images/Facebook.png" style="padding-right: 10px">시작하기<br>
-				<img src="/fakebooks/assets/images/newsfeed.png"
-					style="padding-right: 10px">뉴스피드<br> <img
-					src="/fakebooks/assets/images/mes.png" style="padding-right: 10px">메세지<br>
-				<img src="/fakebooks/assets/images/find.png" style="padding-right: 10px">친구찾기<br>
-
-
-			</p>
-		</div>
+			<c:import url="/WEB-INF/views/include/extra.jsp"></c:import>
 
 		<div id="footer">
 			<c:import url="/WEB-INF/views/include/footer.jsp"></c:import>
 		</div>
 	</div>
+
+	
 </body>
 </html>

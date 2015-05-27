@@ -21,26 +21,8 @@
 
 </head>
 <body>
-
 	<div id="header">
-		<img src="/fakebooks/assets/images/fww.png"
-			style="margin-left: 40px; margin-top: 10px; float: left;">
-
-		<form action="">
-
-			<input type="text" value="친구찾기" size="40"
-				style="float: left; margin-left: 10px; margin-top: 10px"> <input
-				type="image" src="/fakebooks/assets/images/find-16.png"
-				style="float: left; margin-left: 5px; margin-top: 12px;">
-
-		</form>
-		<div style="float: left; margin-left: 25%">
-			<a href="" style="float: left; text-decoration: none; color: white;">
-				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 20px; height: 20px"> ${authMember.lastname }</a> 
-				<a href=""	style="float: left; text-decoration: none; color: white;">홈</a> 
-				<a href="" style="float: left; text-decoration: none; color: white;">친구
-				찾기</a>
-		</div>
+		<c:import url="/WEB-INF/views/include/header.jsp"></c:import>
 	</div>
 	<div id="container">
 		<div id="wrapper">
@@ -84,45 +66,13 @@ ${authMember.comments}</textarea>
 			</div>
 
 		</div>
-		<div id="navigation">
 
-			<div
-				style="border: hidden; background-color: white; width: 200px; height: auto;">
-				<p style="float: left;">추천 친구</p>
-				<p style="float: left; margin-left: 60px">모두보기</p>
+			<c:import url="/WEB-INF/views/include/navigation.jsp"></c:import>
+			<c:import url="/WEB-INF/views/include/extra.jsp"></c:import>
 
-				<table>
-					<tr>
-						<td style="padding-top: 20px; padding-bottom: 20px">[사진] 친구
-							이름<br>
-							<form action="">
-								<input type="button" value="친구 추가 하기">
-							</form>
-						</td>
-					</tr>
-
-
-				</table>
-
-			</div>
-
-		</div>
-
-		<div id="extra">
-			<p>
-				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 120px; height: 120px"><br> ${authMember.firstname } ${authMember.lastname }<br> 프로필편집<br> <br> <img
-					src="/fakebooks/assets/images/Facebook.png" style="padding-right: 10px">시작하기<br>
-				<img src="/fakebooks/assets/images/newsfeed.png"
-					style="padding-right: 10px">뉴스피드<br> <img
-					src="/fakebooks/assets/images/mes.png" style="padding-right: 10px">메세지<br>
-				<img src="/fakebooks/assets/images/find.png" style="padding-right: 10px">친구찾기<br>
-
-
-			</p>
-		</div>
 
 		<div id="footer">
-			<p>made by 이은호, 제민재</p>
+			<c:import url="/WEB-INF/views/include/footer.jsp"></c:import>
 		</div>
 	</div>
 </body>
