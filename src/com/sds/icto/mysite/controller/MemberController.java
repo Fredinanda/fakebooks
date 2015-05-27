@@ -1,9 +1,12 @@
 package com.sds.icto.mysite.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,18 +55,13 @@ public class MemberController {
 		return "redirect:/index";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String loginform() {
-		
-		return "member/loginform";
-	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login( @ModelAttribute MemberVo vo, HttpSession session  ) {
+	public String login( @ModelAttribute MemberVo vo, HttpSession session ) {
 		MemberVo memberVo = memberService.authUser( vo );
 		//로그인 실패
-		if( memberVo == null ) {
-			return "redirect:/member/login?result=fail";
+		if( memberVo == null ) {			
+			return "main/loginresult";
 		}
 		
 		//로그인 성공

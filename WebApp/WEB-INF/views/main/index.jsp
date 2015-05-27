@@ -110,12 +110,7 @@
 		
 		$( "#info" ).submit(function(){
 			
-			if( data) {
-		 		alert("이메일 중복 여부를 확인 해 주세요.");
-		 		return false;
-		 	
-			}	
-			alert("성공적으로 가입하셨습니다.");
+			
 		});
 		
 	});
