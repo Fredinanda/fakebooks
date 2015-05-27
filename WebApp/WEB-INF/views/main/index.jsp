@@ -8,7 +8,7 @@
 <meta name="generator" content="HAPedit 3.1">
 
 
-<link href="/face/assets/css/index.css" rel="stylesheet" type="text/css">
+<link href="/fakebooks/assets/css/index.css" rel="stylesheet" type="text/css">
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <script>
@@ -71,13 +71,13 @@
 	<div id="header">
 
 		<div id="left">
-			<h1><a href="/face/index" style="text-decoration:none">fakebook</a></h1>
+			<h1><a href="/fakebooks/index" style="text-decoration:none">fakebook</a></h1>
 		</div>
 
 
 		<div id=right2>
 			<br>
-			<form action="/face/member/login" method="post" id="info">
+			<form action="/fakebooks/member/login" method="post" id="info">
 
 				<div id="email-wrap" class="slider">
 					<label for="email" style="float: left;">E-mail</label> <input
@@ -111,11 +111,11 @@
 				<h2>
 					 Fakebook에서 전세계에 있는 친구, 가족, 지인들과<br> 함께 이야기를 나눠보세요.
 				</h2>
-				<img src="/face/assets/images/world.png">
+				<img src="/fakebooks/assets/images/world.png">
 			</div>
 
 			<div id="right">
-				<form action="/face/member/join" method="post" id="info">
+				<form action="/fakebooks/member/join" method="post" id="info">
 					<h1>가입하기</h1>
 					<p>항상 지금처럼 무료로 이용하실 수 있습니다.</p>
 

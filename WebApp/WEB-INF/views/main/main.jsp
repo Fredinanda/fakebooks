@@ -1,8 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <% pageContext.setAttribute("newLineChar", "\n"); %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -13,7 +14,7 @@
 
 
 
-<link href= "/face/assets/css/main.css" rel="stylesheet" type="text/css">
+<link href="/fakebooks/assets/css/main.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-1.9.0.js"></script>
@@ -114,22 +115,22 @@
 <body>
 
 	<div id="header">
-		<img src="/face/assets/images/fww.png"
+		<img src="/fakebooks/assets/images/fww.png"
 			style="margin-left: 40px; margin-top: 10px; float: left;">
 
 		<form action="">
 
 			<input type="text" value="친구찾기" size="40"
 				style="float: left; margin-left: 10px; margin-top: 10px"> <input
-				type="image" src="/face/assets/images/find-16.png"
+				type="image" src="/fakebooks/assets/images/find-16.png"
 				style="float: left; margin-left: 5px; margin-top: 12px;">
 
 		</form>
 		<div style="float: left; margin-left: 25%">
-			<a href="" style="float: left; text-decoration: none; color: white;">[사진]사용자
-				이름</a> <a href=""
-				style="float: left; text-decoration: none; color: white;">홈</a> <a
-				href="" style="float: left; text-decoration: none; color: white;">친구
+			<a href="" style="float: left; text-decoration: none; color: white;">
+				[사진]${authMember.lastname }</a> 
+				<a href=""	style="float: left; text-decoration: none; color: white;">홈</a> 
+				<a href="" style="float: left; text-decoration: none; color: white;">친구
 				찾기</a>
 		</div>
 	</div>
@@ -143,21 +144,22 @@
 					<p style="float: left;">업데이트</p>
 					<p style="float: left;">사진/동영상 추가</p>
 
-					<img src="/face/assets/images/line.png">
+					<img src="/fakebooks/assets/images/line.png">
 					<form action="" method="post">
-				
-					<input type="hidden" value="22" name="memberno" id="memberno">
-					
-					<input type="hidden" value="test"  name="firstname" id="firstname">
-					
-					<input type="hidden" value="testtest" name="lastname" id="lastname">
-					
-	
 
-					
-					<textarea name="message" id="message" rows="6"
-						style="line-height: 1; overflow: hidden; font-size: 120%; width: 100%; margin-bottom: 10px;">무슨 생각을 하고 계신가요?</textarea>
-					<script type='text/javascript'>
+						<input type="hidden" value="${authMember.no }" name="memberno" id="memberno">
+
+						<input type="hidden" value="${authMember.firstname }" name="firstname" id="firstname">
+
+						<input type="hidden" value="${authMember.lastname }" name="lastname"
+							id="lastname">
+
+
+
+
+						<textarea name="message" id="message" rows="6"
+							style="line-height: 1; overflow: hidden; font-size: 120%; width: 100%; margin-bottom: 10px;">무슨 생각을 하고 계신가요?</textarea>
+						<script type='text/javascript'>
 						$(function() {
 							$('textarea').autogrow();
 						});
@@ -167,27 +169,22 @@
 
 
 
-					
+
 						<input type="submit" value="게시" style="float: right;">
 					</form>
 				</div>
 
-	
+
 				<!-- 내 타임라인 -->
-				<c:forEach items="${list}" var="vo"  >
+				<c:forEach items="${list}" var="vo">
 					<div id="readbox">
-						[사진]<br> 
-						${vo.lastname}<br>
-						${vo.reg_date}<br> 
-						<br>
-						${vo.message} <br>
-						
-						좋아요 댓글달기
-					
-									
+						[사진]<br> ${vo.lastname}<br> ${vo.reg_date}<br> <br>
+						${vo.message} <br> 좋아요 댓글달기
+
+
 					</div>
 				</c:forEach>
-				
+
 			</div>
 
 		</div>
@@ -217,14 +214,12 @@
 
 		<div id="extra">
 			<p>
-				[사진]<br> 제민재<br> 프로필편집<br> <br> <img
-					src="/face/assets/images/Facebook.png"
-					style="padding-right: 10px">시작하기<br> <img
-					src="/face/assets/images/newsfeed.png"
+				[사진]<br> ${authMember.firstname } ${authMember.lastname }<br> 프로필편집<br> <br> <img
+					src="/fakebooks/assets/images/Facebook.png" style="padding-right: 10px">시작하기<br>
+				<img src="/fakebooks/assets/images/newsfeed.png"
 					style="padding-right: 10px">뉴스피드<br> <img
-					src="/face/assets/images/mes.png" style="padding-right: 10px">메세지<br>
-				<img src="/face/assets/images/find.png"
-					style="padding-right: 10px">친구찾기<br>
+					src="/fakebooks/assets/images/mes.png" style="padding-right: 10px">메세지<br>
+				<img src="/fakebooks/assets/images/find.png" style="padding-right: 10px">친구찾기<br>
 
 
 			</p>
