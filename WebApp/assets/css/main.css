@@ -30,6 +30,29 @@ div#header {
 	text-align: left;
 }
 
+div#header div .logo a img {
+	height: 30px;
+	width: 30px;
+	margin-left: 20px; 
+	margin-top: 0px; 
+	float: left;
+}
+
+
+div#header div .mypic img {
+	height: 20px;
+	width: 20px;
+	margin-top: 10px; 
+
+}
+
+
+div#header div a img{
+	 width: 20px;
+	 height: 20px;
+	 padding: 5px;
+}
+
 div#container {
 	text-align: left
 }

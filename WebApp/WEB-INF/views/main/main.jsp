@@ -112,33 +112,18 @@
 
 
 </head>
-<body>
+<body link="white" alink="white" vlink="white">
+
 
 	<div id="header">
-		<img src="/fakebooks/assets/images/fww.png"
-			style="margin-left: 40px; margin-top: 10px; float: left;">
-
-		<form action="">
-
-			<input type="text" value="친구찾기" size="40"
-				style="float: left; margin-left: 10px; margin-top: 10px"> <input
-				type="image" src="/fakebooks/assets/images/find-16.png"
-				style="float: left; margin-left: 5px; margin-top: 12px;">
-
-		</form>
-		<div style="float: left; margin-left: 25%">
-			<a href="" style="float: left; text-decoration: none; color: white;">
-				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 20px; height: 20px"> ${authMember.lastname }</a> 
-				<a href=""	style="float: left; text-decoration: none; color: white; margin-left: 10px">홈</a> 
-				<a href="" style="float: left; text-decoration: none; color: white;">친구
-				찾기</a>
-		</div>
+		<c:import url="/WEB-INF/views/include/header.jsp"></c:import>
 	</div>
+
 	<div id="container">
+
+		
 		<div id="wrapper">
-
 			<div id="content">
-
 
 				<div id="textbox">
 					<p style="float: left;">업데이트</p>
@@ -226,7 +211,7 @@
 		</div>
 
 		<div id="footer">
-			<p>made by 이은호, 제민재</p>
+			<c:import url="/WEB-INF/views/include/footer.jsp"></c:import>
 		</div>
 	</div>
 </body>
