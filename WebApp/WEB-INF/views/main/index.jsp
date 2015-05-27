@@ -13,7 +13,7 @@
 	src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <script>
 	$(function() {
-		$('#info .slider label').each(function() {
+		$('#info .slider label, #joinform .slider label').each(function() {
 			var labelColor = '#999';
 			var restingPosition = '5px';
 
@@ -60,9 +60,65 @@
 				}
 			});
 		})
+
+	
+		$( "#joinform" ).submit(function(){
+			//이름 체크
+			//이메일 사용여부
+			if($( "#email-checked" ).is(":visible") == false) {
+		 		alert("이메일 중복 여부를 확인 해 주세요.");
+		 		return false;
+		 	}
+			
+			alert("성공적으로 가입하셨습니다.");
+			//페스워드 체크
+		});
+		
+		$( "#email2" ).change( function() {
+			$( "#checkbutton-email" ).show();
+			$( "#email-checked" ).hide();
+		});
+		
+		$( "#checkbutton-email" ).click( function() {
+			var email = $( "#email2" ).val();
+			if(email==""){
+				alert("이메일이 비어 있습니다.");
+				return;
+			}
+			var postData = "email=" + email;
+			  $.ajax( {
+				    url : "/fakebooks/member/checkEmail",
+				    type: "post",
+				    data: postData,
+
+				    success: function( response ){
+				    	if( response.result == false  ) {
+				    		// 사용가능
+				    		$( "#checkbutton-email" ).hide();
+				    		$( "#email-checked" ).show();
+				    	} else {
+				    		alert( response.data );
+				    	}
+				    	console.log( response );
+				    },
+				    error: function( jqXHR, status, e ){
+				       console.error( status + " : " + e );
+				    }
+
+				   });
+		});
+		
+		$( "#info" ).submit(function(){
+			
+			if( data) {
+		 		alert("이메일 중복 여부를 확인 해 주세요.");
+		 		return false;
+		 	
+			}	
+			alert("성공적으로 가입하셨습니다.");
+		});
+		
 	});
-	
-	
 
 </script>
 
@@ -90,11 +146,7 @@
 							id="pass" name="password"> <input id="loginbutton"
 							type="submit" value="로그인">
 					</div>
-
-
 				</div>
-
-
 			</form>
 		</div>
 
@@ -115,7 +167,7 @@
 			</div>
 
 			<div id="right">
-				<form action="/fakebooks/member/join" method="post" id="info">
+				<form action="/fakebooks/member/join" method="post" id="joinform">
 					<h1>가입하기</h1>
 					<p>항상 지금처럼 무료로 이용하실 수 있습니다.</p>
 
@@ -132,7 +184,13 @@
 					<div id="email2-wrap" class="slider">
 						<label for="email2">E&ndash;mail</label> <input type="text"
 							id="email2" name="email">
+						<img src="/fakebooks/assets/images/check.png" id="email-checked" style="width:18px;display:none"/>
+						<input id="checkbutton-email" type="button" value="e-mail 중복체크">
 					</div>
+					
+					
+					
+					
 					<!--/#email-wrap-->
 
 					<div id="checkemail-wrap" class="slider">

@@ -1,5 +1,7 @@
 package com.sds.icto.mysite.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +17,13 @@ public class MemberService {
 		memberDao.insert(vo);
 	}
 	
-
 	public MemberVo authUser( MemberVo vo ) {
 		MemberVo memberVo = memberDao.login(vo);
 		return memberVo;
+	}
+	
+	public ArrayList<MemberVo> getMemberList(){
+		ArrayList<MemberVo> list = memberDao.getMember();
+		return list;
 	}
 }

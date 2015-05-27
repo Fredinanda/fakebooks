@@ -1,5 +1,9 @@
 package com.sds.icto.mysite.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +24,6 @@ public class MemberController {
 	@Autowired
 	MemberService memberService;
 
-//	@RequestMapping(value = "/join", method = RequestMethod.POST)
-//	public String join( @ModelAttribute MemberVo vo ){
-//		
-//		String year = 	
-//		
-//		memberService.joinUser( vo );
-//		return "redirect:/index";
-//	}
 	
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String join( @RequestParam String firstname,
@@ -56,19 +52,52 @@ public class MemberController {
 		return "redirect:/index";
 	}
 	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String loginform() {
+		
+		return "member/loginform";
+	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login( @ModelAttribute MemberVo vo, HttpSession session  ) {
 		MemberVo memberVo = memberService.authUser( vo );
 		//로그인 실패
-//		if( memberVo == null ) {
-//			return "redirect:/member/login?result=fail";
-//		}
+		if( memberVo == null ) {
+			return "redirect:/member/login?result=fail";
+		}
 		
 		//로그인 성공
 		session.setAttribute("authMember", memberVo);
 		return "redirect:/timeline";
 	}
+	
+	@RequestMapping("/checkEmail")
+	@ResponseBody
+	public Object checkEmail(String email) {
+
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		ArrayList<MemberVo> list = memberService.getMemberList();
+		
+		
+		int count = 0;
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getEmail().equals(email) == true) {
+				count++;
+			}
+		}
+		
+		  if(count == 0){
+			map.put("result", false);
+			map.put("data", "사용할 수 있습니다.");
+		} else {
+			map.put("result", true);
+			map.put("data", "사용할 수 없습니다.");
+		}
+
+		return map;
+	}
+	
 	
 	@RequestMapping("/logout")
 	public String logout( HttpSession session ) {
