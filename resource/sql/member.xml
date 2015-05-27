@@ -5,7 +5,7 @@
  
  <typeAlias alias="memberVo" type="com.sds.icto.mysite.domain.MemberVo" /> 
 		
-	   <resultMap class="MemberVo" id="resultMapList">
+   <resultMap class="MemberVo" id="resultMapList">
 			<result column="no" property="no" />
 			<result column="firstname" property="firstname" />
 			<result column="lastname" property="lastname" />
@@ -17,30 +17,32 @@
 			<result column="address" property="address" />
 			<result column="comments" property="comments" />
 			<result column="REG_DATE" property="sysdate" />
-		    
+			
 	 	 </resultMap>
-
-	
-	
-	<insert id="insert" parameterClass="MemberVo">
+  
+	<insert id="insert" parameterClass="memberVO">
 		<![CDATA[
 		insert into member 
-		values (member_no_seq.nextval, #firstname#, #lastname#, #email#, #password#, #gender#, #birth#, '직장', '주소', '코멘트', sysdate )
+		values (member_no_seq.nextval, #firstname#, #lastname#, #email#, #password#, #gender#, #birth#, 0, 0, 0, sysdate )
 		]]>  
 	</insert>
 	
 
-	<select id="login" parameterClass="MemberVo" resultClass="MemberVo">
-		<![CDATA[
+	<select id="login" parameterClass="memberVO" resultClass="memberVO">
 		select * 
 		from member 
 		where email = #email#
 		and password = #password#
-		]]>  
-		
 	</select>
   
-  <update id="update" parameterClass="MemberVo">
+	<select id="list" resultMap="resultMapList">
+		<![CDATA[
+		select *
+		from member
+		]]>
+	</select>
+	
+	<update id="update" parameterClass="MemberVo">
   		<![CDATA[
   		UPDATE member
 		set workplace = #workplace#, address = #address#, comments = #comments#
@@ -48,7 +50,7 @@
   		]]>  
   	
 </update>
-
+	
 
   
 </sqlMap>
