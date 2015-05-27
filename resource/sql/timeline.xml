@@ -30,6 +30,7 @@
 	 <![CDATA[ 
 			select timelineno, memberno, firstname, lastname, message, reg_date
 			from TIMELINE
+			ORDER BY reg_date DESC
 	  ]]>
 	</select>
 
