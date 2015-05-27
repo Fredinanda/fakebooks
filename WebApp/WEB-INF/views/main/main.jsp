@@ -214,7 +214,7 @@
 
 		<div id="extra">
 			<p>
-				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 120px; height: 120px"><br> ${authMember.firstname } ${authMember.lastname }<br> <a href="profile" style="float: left; text-decoration: none; color: black;">프로필편집</a><br> <br> <img
+				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 120px; height: 120px"><br> ${authMember.firstname } ${authMember.lastname }<br> <a href="timeline/profile" style="float: left; text-decoration: none; color: black;">프로필편집</a><br> <br> <img
 					src="/fakebooks/assets/images/Facebook.png" style="padding-right: 10px">시작하기<br>
 				<img src="/fakebooks/assets/images/newsfeed.png"
 					style="padding-right: 10px">뉴스피드<br> <img
