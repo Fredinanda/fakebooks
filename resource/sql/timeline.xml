@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="timeline">
+
+	<typeAlias alias="TimelineVo" type="com.sds.icto.mysite.domain.TimeLineVo" />
+
+	<resultMap class="TimeLineVo" id="resultMapList">
+
+		<result column="timelineno" property="timelineno" />
+		<result column="memberno" property="memberno" />
+		<result column="firstname" property="firstname" />
+		<result column="lastname" property="lastname" />
+		<result column="message" property="message" />
+		<result column="reg_date" property="reg_date" />
+
+	</resultMap>
+
+
+	<insert id="insert" parameterClass="TimeLineVo">
+		<![CDATA[
+		insert into TIMELINE 
+			values (timeline_seq.nextval, #memberno# , #firstname#, #lastname#, #message#, sysdate )
+		]]>
+	</insert>
+
+
+
+	<select id="list" resultMap="resultMapList">
+	 <![CDATA[ 
+			select timelineno, memberno, firstname, lastname, message, reg_date
+			from TIMELINE
+	  ]]>
+	</select>
+
+
+
+
+
+
+
+</sqlMap>

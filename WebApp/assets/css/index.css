@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+
+
+body {
+	background: #48649E;
+	margin: 0;
+	padding: 0;
+}
+
+div#header {
+	height: 80px;
+	width: 100%;
+	margin: 0 0 0 0;
+	background: #48649E;
+	color: WHITE;
+}
+
+#container {
+	text-align: left;
+	height: 500px;
+	width: 100%;
+	margin: 0 auto;
+	background: #EDEFF5;
+}
+
+#left {
+	float: left;
+	width: 50%;
+	padding : 0 0 0 40px;
+}
+
+#left h1 {
+	font-size: 40px;
+	padding : 0 0 0 40px;
+}
+
+#right {
+	float: right;
+	width: 40%;
+}
+
+#right2 {
+	float: right;
+	width: 30%;
+}
+
+body {
+	font: 12px/1.3 Arial, Sans-serif;
+}
+
+form {
+	width: 380px;
+	padding: 0 0 0 0;
+}
+
+div {
+	position: relative;
+	margin: 0 0 10px;
+}
+
+label {
+	cursor: pointer;
+	display: block;
+}
+
+input[type="text"] {
+	width: 400px;
+	border: 1px solid #999;
+	padding: 5px;
+	-moz-border-radius: 4px;
+}
+
+input[type="text"]:focus {
+	border-color: #777;
+}
+
+input[type="password"] {
+	width: 400px;
+	border: 1px solid #999;
+	padding: 5px;
+	-moz-border-radius: 4px;
+}
+
+input[type="password"]:focus {
+	border-color: #777;
+}
+
+input[name="firstname"] {
+	width: 150px;
+}
+
+input[name="lastname"] {
+	width: 150px;
+}
+
+input[name="email"] {
+	width: 150px;
+}
+
+input[name="password"] {
+	width: 150px;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+	border: 1px solid #999;
+	padding: 5px;
+	-moz-border-radius: 4px;
+	background: #eee;
+}
+
+input[type="submit"]:hover,input[type="submit"]:focus {
+	border-color: #333;
+	background: #ddd;
+}
+
+input[type="submit"]:active {
+	margin-top: 1px;
+}
+
+#container h2 {
+	padding: 50px;
+	color: #0E385F;
+}
+
+div#footer {
+	background: #E9EAED;
+	color: #FFF
+}
+
+div#footer p {
+	margin: -10px;
+	padding: 5px 10px;
+	width: 500px
+}
+
+div#footer {
+	clear: left;
+	width: 100%;
+	color: black;
+}

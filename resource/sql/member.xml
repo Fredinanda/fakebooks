@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+ <sqlMap namespace="member">
+ 
+ <typeAlias alias="memberVo" type="com.sds.icto.mysite.domain.MemberVo" /> 
+		
+   <resultMap class="MemberVo" id="resultMapList">	  
+		  <result column="no" property="no" /> 
+		  <result column="firstname" property="firstname" /> 
+		  <result column="lastname" property="lastname" /> 
+		  <result column="email" property="email" /> 
+		  <result column="password" property="password" /> 
+		  <result column="gender" property="gender" />
+		  <result column="birth" property="birth" />
+		  <result column="REG_DATE" property="sysdate"/>
+	 	 </resultMap>
+  
+	<insert id="insert" parameterClass="memberVO">
+		<![CDATA[
+		insert into member 
+		values (member_no_seq.nextval, #firstname#, #lastname#, #email#, #password#, #gender#, #birth#, 0, 0, 0, sysdate )
+		]]>  
+	</insert>
+	
+
+	<select id="login" parameterClass="memberVO" resultClass="memberVO">
+		select * 
+		from member 
+		where email = #email#
+		and password = #password#
+	</select>
+  
+
+
+  
+</sqlMap>
