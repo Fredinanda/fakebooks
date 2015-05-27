@@ -13,6 +13,8 @@ public class MemberVo {
 	private String address;
 	private String comments;
 	private String sysdate;
+	
+	
 	public Long getNo() {
 		return no;
 	}

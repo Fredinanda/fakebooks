@@ -16,11 +16,8 @@ p {
 	margin: 0 10px 10px
 }
 
-a {
-	display: block;
-	color: #981793;
-	padding: 10px
-}
+
+
 
 div#header {
 	height: 40px;
@@ -41,8 +38,15 @@ div#content p {
 	line-height: 1.4
 }
 
+textarea {
+ 	resize: none;
+    border: 0 none #FFF;
+    overflow: hidden;
+}
+
+
 div#content #textbox {
-	border: none 1px;
+	/* border: none 1px; */
 	background: white;
 	width: 580px;
 	height: auto;

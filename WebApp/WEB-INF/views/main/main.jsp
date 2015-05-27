@@ -128,8 +128,8 @@
 		</form>
 		<div style="float: left; margin-left: 25%">
 			<a href="" style="float: left; text-decoration: none; color: white;">
-				[사진]${authMember.lastname }</a> 
-				<a href=""	style="float: left; text-decoration: none; color: white;">홈</a> 
+				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 20px; height: 20px"> ${authMember.lastname }</a> 
+				<a href=""	style="float: left; text-decoration: none; color: white; margin-left: 10px">홈</a> 
 				<a href="" style="float: left; text-decoration: none; color: white;">친구
 				찾기</a>
 		</div>
@@ -214,7 +214,7 @@
 
 		<div id="extra">
 			<p>
-				[사진]<br> ${authMember.firstname } ${authMember.lastname }<br> 프로필편집<br> <br> <img
+				<img src="/fakebooks/assets/images/uknown.jpg" style="width: 120px; height: 120px"><br> ${authMember.firstname } ${authMember.lastname }<br> <a href="profile" style="float: left; text-decoration: none; color: black;">프로필편집</a><br> <br> <img
 					src="/fakebooks/assets/images/Facebook.png" style="padding-right: 10px">시작하기<br>
 				<img src="/fakebooks/assets/images/newsfeed.png"
 					style="padding-right: 10px">뉴스피드<br> <img

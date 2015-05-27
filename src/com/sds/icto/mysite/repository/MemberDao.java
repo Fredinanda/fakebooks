@@ -27,7 +27,7 @@ public class MemberDao {
 
 		return member;
 	}
-
+	
 	public MemberVo getMember(MemberVo vo) {
 		return null;
 	}
