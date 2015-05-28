@@ -15,7 +15,7 @@
 				style="float: left; margin-left: 0px; margin-top: 11px; height: 19px; width: 19px;">
 
 		</form>
-		<div style="float:left; margin-left: 40%; width:200px">
+		<div style="float:left; margin-left: 25%; width:200px">
 			<div class="mypic" style="float:left; width:30px; margin-right:0px">
 			
 			<a href="/fakebooks/timeline/picture"><img src="/fakebooks/assets/id${authMember.no}.jpg"></a>
