@@ -7,19 +7,16 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-
+import org.springframework.web.servlet.ModelAndView;
 
 
 import com.sds.icto.mysite.domain.MemberVo;
@@ -32,8 +29,8 @@ import com.sds.icto.mysite.service.TimeLineService;
 public class TimeLineController {
 	@Autowired
 	TimeLineService timelineservie;
-	
 
+	
 	@RequestMapping( value={ "", "/" })
 	public String list( Model model ) {
 		
@@ -59,13 +56,18 @@ public class TimeLineController {
 	
 		
 	@RequestMapping( value={"/profile"} , method=RequestMethod.POST)
-	public String updateprofile(@ModelAttribute MemberVo mvo, HttpSession session){
+	public String updateprofile(@ModelAttribute MemberVo mvo, HttpSession session ){
 		
 		timelineservie.updateProfile(mvo);
 		session.setAttribute("authMember", mvo);
-				
-					
+			
 		return "redirect:/timeline/profile";
+	}
+
+	@RequestMapping(value={"/delete/{no}"}, method=RequestMethod.GET)
+	public String deleteForm(@PathVariable Long no, Model model){
+		timelineservie.timeLineDelete(no);
+		return "main/deleteform";
 	}
 	
 
@@ -114,7 +116,5 @@ public class TimeLineController {
 			}
 		}
 	}	
-	
-	
 
 }
