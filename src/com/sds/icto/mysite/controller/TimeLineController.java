@@ -78,7 +78,7 @@ public class TimeLineController {
 
 	@SuppressWarnings("unused")
 	@RequestMapping( value={"/picture"} , method=RequestMethod.POST)
-	public String picture2(@RequestParam Long no , @RequestParam("file")MultipartFile file ) {
+	public String picture2(@RequestParam Long no , @RequestParam("file")MultipartFile file ,@ModelAttribute MemberVo mvo, HttpSession session) {
         
 		
         String fileOriginalName = file.getOriginalFilename();
@@ -95,6 +95,9 @@ public class TimeLineController {
         saveFileName += ( "." + extName );
 
         writeFile( file, "c:\\icto55\\workspacee\\fakebooks\\WebApp\\assets", saveFileName );
+        
+        timelineservie.updatepciture(mvo);
+		session.setAttribute("authMember", mvo);
         
 		return "redirect:/timeline";
 	}

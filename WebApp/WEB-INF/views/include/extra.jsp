@@ -7,15 +7,19 @@
 
 <div id="extra">
 	<p>
-
-	
-		<a href="/fakebooks/timeline/picture">
-			<img src="/fakebooks/assets/id${authMember.no}.jpg" style="width: 120px; height: 120px"></a>
-			<br>
 		
 		
+			<a href="/fakebooks/timeline/picture">
+				<img src="${authMember.imagedir}" style="width: 120px; height: 120px"></a>
+			
+		
+		
+			
+			
+			
+		<br>
 		${authMember.firstname } ${authMember.lastname }<br> 
-		<a href="profile"
+		<a href="/fakebooks/timeline/profile"
 			style="float: left; text-decoration: none; color: black;">프로필편집</a><br>
 		<br> <img src="/fakebooks/assets/images/Facebook.png"
 			style="padding-right: 10px">시작하기<br> <img

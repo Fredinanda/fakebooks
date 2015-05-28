@@ -31,7 +31,11 @@ public class TimeLineService {
 	public void updateProfile(MemberVo mvo){
 		TimeLineDao.update(mvo);
 	}
-
+	
+	public void updatepciture(MemberVo mvo){
+		TimeLineDao.update(mvo);
+	}
+	
 	public void timeLineDelete(Long no){
 		TimeLineVo vo = new TimeLineVo();
 		vo.setTimelineno( no );

@@ -18,7 +18,7 @@
 		<div style="float:left; margin-left: 40%; width:200px">
 			<div class="mypic" style="float:left; width:30px; margin-right:0px">
 			
-			<a href="/fakebooks/timeline/picture"><img src="/fakebooks/assets/id${authMember.no}.jpg"></a>
+			<a href="/fakebooks/timeline/picture"><img src="${authMember.imagedir}"></a>
 			
 			</div>
 			<a href="" style="float:left;text-decoration: none; color: white;"> ${authMember.lastname }</a> 

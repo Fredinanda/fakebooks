@@ -35,7 +35,7 @@
 
 				<form action="" method="post"  enctype="multipart/form-data">
 					<input type="hidden" value="${authMember.no}" name="no" id="no">
-
+					<input type="hidden" value= "/fakebooks/assets/id${authMember.no}.jpg" name="imagedir" id="imagedir">
 
 					사진 업로드 <input type="file" name="file" style="margin-left: 10px">
 					<input type="submit" value="업로드" style="margin-left: px;">

@@ -13,8 +13,15 @@ public class MemberVo {
 	private String address;
 	private String comments;
 	private String sysdate;
+	private String imagedir;
 	
 	
+	public String getImagedir() {
+		return imagedir;
+	}
+	public void setImagedir(String imagedir) {
+		this.imagedir = imagedir;
+	}
 	public Long getNo() {
 		return no;
 	}
