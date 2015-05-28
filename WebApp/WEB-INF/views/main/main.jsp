@@ -126,8 +126,8 @@
 			<div id="content">
 
 				<div id="textbox">
-					<p style="float: left;">업데이트</p>
-					<p style="float: left;">사진/동영상 추가</p>
+					<p style="float: left;"><img src="/fakebooks/assets/images/updatepic.PNG">업데이트</p>
+					<p style="float: left;"><span><img src="/fakebooks/assets/images/updatepic2.PNG">사진/동영상 추가</span></p>
 
 					<img src="/fakebooks/assets/images/line.png">
 					<form action="" method="post">
@@ -142,8 +142,8 @@
 
 
 
-						<textarea name="message" id="message" rows="6"
-							style="line-height: 1; overflow: hidden; font-size: 120%; width: 100%; margin-bottom: 10px;">무슨 생각을 하고 계신가요?</textarea>
+						<textarea title="무슨 생각을 하고 계신가요?" placeholder="무슨 생각을 하고 계신가요?" aria-label="무슨 생각을 하고 계신가요?" name="message" id="message" rows="6"
+							style="line-height: 1; overflow: hidden; font-size: 120%; width: 100%; margin-bottom: 10px;"></textarea>
 						<script type='text/javascript'>
 						$(function() {
 							$('textarea').autogrow();
@@ -151,13 +151,9 @@
 						</script>
 
 
-						
 
-
-
-						<input type="submit" value="게시" style="float: right;">
-					</fo
-					rm>
+						<input type="submit" value="게시" style="float: right; padding: 5px 16px; background-color: #4e69a2; font-size: 12px; color: #fff; border-color: #435a8b #3c5488 #334c83;">
+					</form>
 				</div>
 
 

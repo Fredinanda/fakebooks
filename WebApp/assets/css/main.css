@@ -78,6 +78,13 @@ div#content #textbox {
 	padding-bottom: 40px;
 }
 
+div#content #textbox img{
+	padding: 0px;
+}
+
+div#content #textbox span{
+	height: auto;
+}
 div#content #readbox {
 	border: none 1px;
 	
