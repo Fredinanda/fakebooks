@@ -13,6 +13,7 @@
 		<result column="lastname" property="lastname" />
 		<result column="message" property="message" />
 		<result column="reg_date" property="reg_date" />
+		<result column="imagedir" property="imagedir"/>
 
 	</resultMap>
 
@@ -28,9 +29,10 @@
 
 	<select id="list" resultMap="resultMapList">
 	 <![CDATA[ 
-			select timelineno, memberno, firstname, lastname, message, reg_date
-			from TIMELINE
-			ORDER BY reg_date DESC
+			select a.timelineno, a.memberno, a.firstname, a.lastname, a.message, a.reg_date, b.imagedir
+			from TIMELINE a, MEMBER b
+			where a.memberno = b.no
+			ORDER BY a.reg_date DESC
 	  ]]>
 	</select>
 

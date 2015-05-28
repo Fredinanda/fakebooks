@@ -131,7 +131,7 @@
 
 					<img src="/fakebooks/assets/images/line.png">
 					<form action="" method="post">
-
+					
 						<input type="hidden" value="${authMember.no }" name="memberno" id="memberno">
 
 						<input type="hidden" value="${authMember.firstname }" name="firstname" id="firstname">
@@ -151,7 +151,6 @@
 						</script>
 
 
-
 						<input type="submit" value="게시" style="float: right; padding: 5px 16px; background-color: #4e69a2; font-size: 12px; color: #fff; border-color: #435a8b #3c5488 #334c83;">
 					</form>
 				</div>
@@ -160,7 +159,9 @@
 				<!-- 내 타임라인 -->
 				<c:forEach items="${list}" var="vo">
 					<div id="readbox">
-						[사진] <span class="timelinename">${vo.lastname}</span> <p class="timelinetime">${vo.reg_date}<p> 
+					
+					 <img src="${vo.imagedir}" style="width: 60px; height: 60px">
+						<span class="timelinename">${vo.lastname}</span> <p class="timelinetime">${vo.reg_date}<p> 
 						<p class="timelinewrite">${fn:replace( vo.message, newLineChar, "<br>" ) }</p> 
 						<span>좋아요</span> <span>·</span> <span>댓글달기</span>
 						<c:if test="${authMember.no == vo.memberno }">

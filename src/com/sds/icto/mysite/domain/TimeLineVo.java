@@ -9,9 +9,19 @@ public class TimeLineVo {
 	private String lastname;
 	private String message;
 	private String reg_date;
+	private String imagedir;
 	
 	
 	
+	public String getImagedir() {
+		return imagedir;
+	}
+	public void setImagedir(String imagedir) {
+		this.imagedir = imagedir;
+	}
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
+	}
 	public Long getTimelineno() {
 		return timelineno;
 	}
