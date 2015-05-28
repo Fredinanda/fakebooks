@@ -10,9 +10,15 @@ public class TimeLineVo {
 	private String message;
 	private String reg_date;
 	private String imagedir;
+	private Long likes;
 	
 	
-	
+	public Long getLikes() {
+		return likes;
+	}
+	public void setLikes(Long likes) {
+		this.likes = likes;
+	}
 	public String getImagedir() {
 		return imagedir;
 	}

@@ -39,5 +39,9 @@ public class TimeLineDao {
 		System.out.println(vo.getTimelineno());
 	}
 
+	public void UpdateLikescnt(TimeLineVo vo) {
+		
+		sqlmapclienttemplate.update("timeline.updateLikescnt", vo);
+	}
 	
 }

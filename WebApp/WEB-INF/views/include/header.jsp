@@ -9,8 +9,9 @@
 
 		<form action="">
 
-			<input type="text" value="친구찾기" size="40"
-				style="float: left; margin-left: 10px; margin-top: 10px"> <input
+			<input type="text" placeholder="궁금한 친구나 장소를 검색해보세요." size="40"
+				style="float: left; margin-left: 10px; margin-top: 10px"> 
+				<input
 				type="image" src="/fakebooks/assets/images/find-16.png"
 				style="float: left; margin-left: 0px; margin-top: 11px; height: 19px; width: 19px;">
 

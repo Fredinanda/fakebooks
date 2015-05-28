@@ -127,7 +127,7 @@
 
 				<div id="textbox">
 					<p style="float: left;"><img src="/fakebooks/assets/images/updatepic.PNG">업데이트</p>
-					<p style="float: left;"><span><img src="/fakebooks/assets/images/updatepic2.PNG">사진/동영상 추가</span></p>
+					<p style="float: left;"><img src="/fakebooks/assets/images/updatepic2.PNG">사진/동영상 추가</p>
 
 					<img src="/fakebooks/assets/images/line.png">
 					<form action="" method="post">
@@ -163,11 +163,29 @@
 					 <img src="${vo.imagedir}" style="width: 60px; height: 60px">
 						<span class="timelinename">${vo.lastname}</span> <p class="timelinetime">${vo.reg_date}<p> 
 						<p class="timelinewrite">${fn:replace( vo.message, newLineChar, "<br>" ) }</p> 
-						<span>좋아요</span> <span>·</span> <span>댓글달기</span>
-						<c:if test="${authMember.no == vo.memberno }">
-							<a href="/fakebooks/timeline/delete/${vo.timelineno }" class="del" >삭제</a>
-						</c:if>
+						<div style="margin-bottom:5px;">
 
+						<span><a href="/fakebooks/timeline/likes" class="likes">좋아요</a></span>
+						<span>·</span> <span>댓글달기</span> 
+						<c:if test="${authMember.no == vo.memberno }">
+							<span>·</span>
+							<span><a href="/fakebooks/timeline/delete/${vo.timelineno }" class="del" >삭제</a></span>
+						</c:if>
+						
+						</div>
+						<div class="likes">
+							
+							<p>
+								<img src="/fakebooks/assets/images/likes.PNG"> ${vo.likes }명이 좋아합니다.
+							</p>
+							
+								
+							<span>
+							<img src="${authMember.imagedir}" style="float: left; width: 30px; margin-top: 7px; margin-right: 0px; margin-bottom:-5px;">
+							<input type="text" placeholder="댓글을 입력하세요." size="70"
+								style="float: left; height: 22px; margin-left: 10px; margin-top: 10px">
+							</span>
+						</div>
 					</div>
 				</c:forEach>
 

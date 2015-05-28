@@ -82,8 +82,12 @@ div#content #textbox img{
 	padding: 0px;
 }
 
-div#content #textbox span{
-	height: auto;
+div#content #textbox p{
+	padding-bottom: 0px;
+	margin-right: 5px;
+}
+div#content #textbox p img{
+	padding-bottom: -5px;
 }
 div#content #readbox {
 	border: none 1px;
@@ -93,14 +97,18 @@ div#content #readbox {
 	height: auto;
 	margin: 10px 10px 10px 50px;
 	padding: 10px;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 	
 }
 
 div#content #readbox .del {
-	color:black;
+	color:#3b5998;
+	text-decoration:none;
 }
-
+div#content #readbox .likes {
+	color:#3b5998;
+	text-decoration:none;
+}
 div#content #readbox span.timelinename {
 	color:#3b5998;
 	font-weight:bold;
@@ -109,7 +117,6 @@ div#content #readbox span.timelinename {
 }
 div#content #readbox span {
 	color:#3b5998;
-
 }
 div#content #readbox p{
 	margin:3px;
@@ -121,6 +128,16 @@ div#content #readbox p.timelinewrite{
 	margin-top:10px;
 	margin-bottom:30px;
 }
+div#content #readbox .likes {
+	margin-top:10px;
+	background-color: #F6F7F8;
+
+}
+div#content #readbox .likes img{
+	margin-bottom:-5px;	
+}
+
+
 div#content #submitbox form {
 	border: none 1px;
 	background: #F6F7F8;

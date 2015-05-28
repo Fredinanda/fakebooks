@@ -21,7 +21,7 @@
 	<insert id="insert" parameterClass="TimeLineVo">
 		<![CDATA[
 		insert into TIMELINE 
-			values (timeline_seq.nextval, #memberno# , #firstname#, #lastname#, #message#, sysdate )
+			values (timeline_seq.nextval, #memberno# , #firstname#, #lastname#, #message#, sysdate, #imagedir# )
 		]]>
 	</insert>
 

@@ -47,5 +47,9 @@ public class TimeLineService {
 		TimeLineDao.delete(vo);
 	}
 	
+	public void timeLineUpdateLikescnt(TimeLineVo vo){
+		TimeLineDao.UpdateLikescnt(vo);
+	}
+	
 	
 }
