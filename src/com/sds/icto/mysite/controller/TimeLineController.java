@@ -59,9 +59,11 @@ public class TimeLineController {
 	public String updateprofile(@ModelAttribute MemberVo mvo, HttpSession session ){
 		
 		timelineservie.updateProfile(mvo);
+		
+	
 		session.setAttribute("authMember", mvo);
-			
-		return "redirect:/timeline/profile";
+		
+		return "redirect:/timeline";
 	}
 
 	@RequestMapping(value={"/delete/{no}"}, method=RequestMethod.GET)
@@ -94,7 +96,7 @@ public class TimeLineController {
         saveFileName += no;
         saveFileName += ( "." + extName );
 
-        writeFile( file, "c:\\icto55\\workspacee\\fakebooks\\WebApp\\assets", saveFileName );
+        writeFile( file, "c:\\icto55\\workspace\\fakebooks\\WebApp\\assets", saveFileName );
         
         timelineservie.updatepciture(mvo);
 		session.setAttribute("authMember", mvo);
