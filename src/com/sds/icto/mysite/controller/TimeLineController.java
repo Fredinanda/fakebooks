@@ -54,6 +54,13 @@ public class TimeLineController {
 		return "main/profile";
 	}
 	
+	@RequestMapping(value={"/likes"}, method=RequestMethod.GET)
+	public String likes(@PathVariable Long timelineno){
+		TimeLineVo vo = new TimeLineVo();
+		vo.getTimelineno();
+		timelineservie.timeLineUpdateLikescnt(vo);
+		return "main/timeline";
+	}
 		
 	@RequestMapping( value={"/profile"} , method=RequestMethod.POST)
 	public String updateprofile(@ModelAttribute MemberVo mvo, HttpSession session ){
