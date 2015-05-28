@@ -57,9 +57,10 @@ public class TimeLineController {
 	@RequestMapping(value={"/likes"}, method=RequestMethod.GET)
 	public String likes(@PathVariable Long timelineno){
 		TimeLineVo vo = new TimeLineVo();
-		vo.getTimelineno();
+		vo.setTimelineno(timelineno);
 		timelineservie.timeLineUpdateLikescnt(vo);
-		return "main/timeline";
+		
+		return "redirect:/timeline";
 	}
 		
 	@RequestMapping( value={"/profile"} , method=RequestMethod.POST)
