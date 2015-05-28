@@ -165,7 +165,9 @@
 					<div id="readbox">
 						[사진]<br> ${vo.lastname}<br> ${vo.reg_date}<br> <br>
 						${vo.message} <br> 좋아요 댓글달기
-
+						<c:if test="${authMember.no == vo.memberno }">
+							<a href="/fakebooks/timeline/delete/${vo.timelineno }" class="del" >삭제</a>
+						</c:if>
 
 					</div>
 				</c:forEach>

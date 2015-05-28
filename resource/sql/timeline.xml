@@ -35,7 +35,12 @@
 	</select>
 
 
-
+	<delete id="delete" parameterClass="TimeLineVo">
+		<![CDATA[
+		delete from timeline
+			where timelineno=#timelineno#
+		]]>
+	</delete>
 
 
 

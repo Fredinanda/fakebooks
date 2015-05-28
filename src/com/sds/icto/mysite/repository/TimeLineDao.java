@@ -29,4 +29,11 @@ public class TimeLineDao {
 		sqlmapclienttemplate.update("member.update", mvo);
 	}
 	
+	public void delete(TimeLineVo vo) {
+
+		sqlmapclienttemplate.delete("timeline.delete", vo);
+		System.out.println(vo.getTimelineno());
+	}
+
+	
 }

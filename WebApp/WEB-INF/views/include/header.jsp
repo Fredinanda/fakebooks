@@ -15,8 +15,12 @@
 				style="float: left; margin-left: 0px; margin-top: 11px; height: 19px; width: 19px;">
 
 		</form>
-		<div style="float:left; margin-left: 25%; width:200px">
-			<div class="mypic" style="float:left; width:30px; margin-right:0px"><img src="/fakebooks/assets/images/uknown.jpg"></div>
+		<div style="float:left; margin-left: 40%; width:200px">
+			<div class="mypic" style="float:left; width:30px; margin-right:0px">
+			
+			<a href="/fakebooks/timeline/picture"><img src="/fakebooks/assets/id${authMember.no}.jpg"></a>
+			
+			</div>
 			<a href="" style="float:left;text-decoration: none; color: white;"> ${authMember.lastname }</a> 
 			<a href="/fakebooks/timeline"	style="float:left; text-decoration: none; color: white; margin-left: 20px">홈</a> 
 			<a href="" style="float:left; text-decoration: none; color: white; margin-left: 10px">친구 추천</a>

@@ -32,4 +32,16 @@ public class TimeLineService {
 		TimeLineDao.update(mvo);
 	}
 
+	public void timeLineDelete(Long no){
+		TimeLineVo vo = new TimeLineVo();
+		vo.setTimelineno( no );
+		
+		TimeLineDao.delete(vo);
+	}
+	
+	public void timeLineDelete(TimeLineVo vo){
+		TimeLineDao.delete(vo);
+	}
+	
+	
 }

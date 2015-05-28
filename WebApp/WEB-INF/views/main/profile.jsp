@@ -21,9 +21,11 @@
 
 </head>
 <body>
+
 	<div id="header">
 		<c:import url="/WEB-INF/views/include/header.jsp"></c:import>
 	</div>
+
 	<div id="container">
 		<div id="wrapper">
 
@@ -55,21 +57,23 @@ ${authMember.comments}</textarea>
 			
 			</tr>
 			
-		
-			<tr>
-			<td>사진 업로드</td>
-			<td><input type="file" name="file" style="margin-left: 10px"> </td>
-			</tr>
 			</table>	
 			<input type="submit" value="업데이트" style="margin-left: 350px;">
-			</form>
+			</form>	
+						
+		
+	
 			</div>
 
+	
+
+
 		</div>
+		
+		
+		<c:import url="/WEB-INF/views/include/navigation.jsp"></c:import>
 
-			<c:import url="/WEB-INF/views/include/navigation.jsp"></c:import>
 			<c:import url="/WEB-INF/views/include/extra.jsp"></c:import>
-
 
 		<div id="footer">
 			<c:import url="/WEB-INF/views/include/footer.jsp"></c:import>

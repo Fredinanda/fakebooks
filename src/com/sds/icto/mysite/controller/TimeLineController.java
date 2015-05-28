@@ -1,10 +1,10 @@
 package com.sds.icto.mysite.controller;
 
 import java.io.FileOutputStream;
-import java.util.Calendar;
+
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +55,6 @@ public class TimeLineController {
 	}
 	
 		
-	
 	@RequestMapping( value={"/profile"} , method=RequestMethod.POST)
 	public String updateprofile(@ModelAttribute MemberVo mvo, HttpSession session ){
 		
@@ -65,7 +64,57 @@ public class TimeLineController {
 		return "redirect:/timeline/profile";
 	}
 
+	@RequestMapping(value={"/delete/{no}"}, method=RequestMethod.GET)
+	public String deleteForm(@PathVariable Long no, Model model){
+		timelineservie.timeLineDelete(no);
+		return "main/deleteform";
+	}
 	
+
+	@RequestMapping("/picture")
+	public String picture1(){
+		return "main/picture";
+	}
+
+	@SuppressWarnings("unused")
+	@RequestMapping( value={"/picture"} , method=RequestMethod.POST)
+	public String picture2(@RequestParam Long no , @RequestParam("file")MultipartFile file ) {
+        
+		
+        String fileOriginalName = file.getOriginalFilename();
+        String extName = fileOriginalName.substring( fileOriginalName.lastIndexOf(".") + 1, fileOriginalName.length() );
+        String fileName = file.getName();
+        Long size = file.getSize();
+        
+        
+        String saveFileName = "";
+     
+        
+        saveFileName += "id";
+        saveFileName += no;
+        saveFileName += ( "." + extName );
+
+        writeFile( file, "c:\\icto55\\workspacee\\fakebooks\\WebApp\\assets", saveFileName );
+        
+		return "redirect:/timeline";
+	}
 	
+	private void writeFile( MultipartFile file, String path, String fileName ) {
+		FileOutputStream fos = null;
+		try {
+			byte fileData[] = file.getBytes();
+			fos = new FileOutputStream( path + "\\" + fileName );
+			fos.write(fileData);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (fos != null) {
+				try {
+					fos.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+	}	
 
 }

@@ -90,6 +90,10 @@ div#content #readbox {
 	
 }
 
+div#content #readbox .del {
+	color:black;
+}
+
 div#content #submitbox form {
 	border: none 1px;
 	background: #F6F7F8;
