@@ -33,7 +33,7 @@ public class TimeLineService {
 	}
 	
 	public void updatepciture(MemberVo mvo){
-		TimeLineDao.update(mvo);
+		TimeLineDao.updatepicture(mvo);
 	}
 	
 	public void timeLineDelete(Long no){
