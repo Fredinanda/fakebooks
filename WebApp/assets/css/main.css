@@ -94,6 +94,26 @@ div#content #readbox .del {
 	color:black;
 }
 
+div#content #readbox span.timelinename {
+	color:#3b5998;
+	font-weight:bold;
+	font-size:1.2em;
+	margin-left:3px;
+}
+div#content #readbox span {
+	color:#3b5998;
+
+}
+div#content #readbox p{
+	margin:3px;
+}
+div#content #readbox p.timelinetime{
+	color:#9197a3;
+}
+div#content #readbox p.timelinewrite{
+	margin-top:10px;
+	margin-bottom:30px;
+}
 div#content #submitbox form {
 	border: none 1px;
 	background: #F6F7F8;
