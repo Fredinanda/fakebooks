@@ -3,7 +3,8 @@
     	<div id="navigation">
 
 			<div
-				style="border: hidden; background-color: white; width: 200px; height: auto;">
+				style="border: hidden; background-color: white; width: 230px; height: auto;
+				margin-top: 10px">
 				<p style="float: left;">추천 친구</p>
 				<p style="float: left; margin-left: 60px">모두보기</p>
 

@@ -73,7 +73,7 @@ div#content #textbox {
 	background: white;
 	width: 580px;
 	height: auto;
-	margin: 10px auto;
+	margin: 10px 10px 10px 50px;
 	padding: 10px;
 	padding-bottom: 40px;
 }
@@ -84,7 +84,7 @@ div#content #readbox {
 	background: white;
 	width: 580px;
 	height: auto;
-	margin: 10px auto;
+	margin: 10px 10px 10px 50px;
 	padding: 10px;
 	padding-bottom: 40px;
 	

@@ -148,10 +148,10 @@
 						$(function() {
 							$('textarea').autogrow();
 						});
-					</script>
+						</script>
 
 
-
+						
 
 
 
@@ -165,7 +165,8 @@
 				<c:forEach items="${list}" var="vo">
 					<div id="readbox">
 						[사진] <span class="timelinename">${vo.lastname}</span> <p class="timelinetime">${vo.reg_date}<p> 
-						<p class="timelinewrite">${vo.message}</p> <span>좋아요</span> <span>·</span> <span>댓글달기</span>
+						<p class="timelinewrite">${fn:replace( vo.message, newLineChar, "<br>" ) }</p> 
+						<span>좋아요</span> <span>·</span> <span>댓글달기</span>
 						<c:if test="${authMember.no == vo.memberno }">
 							<a href="/fakebooks/timeline/delete/${vo.timelineno }" class="del" >삭제</a>
 						</c:if>
