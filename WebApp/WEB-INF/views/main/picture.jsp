@@ -25,52 +25,29 @@
 	<div id="header">
 		<c:import url="/WEB-INF/views/include/header.jsp"></c:import>
 	</div>
-
+	
 	<div id="container">
 		<div id="wrapper">
 
 			<div id="content">
-			<form action="" method="post">
-				<input type="hidden" value= "${authMember.no}" name="no" id="no">
 
-			
-			
-			<table>
-			
-			<tr>
-				<td>직장 or 학교  </td>
-				<td><input type="text" value=" ${authMember.workplace }" name="workplace" id="workplace" size="45" style="border: 0 none #fff;  float: left; margin-left: 10px;"></td>
-	
-			</tr>
-			<tr>
-				<td>주소</td>
-				<td><input type="text" value=" ${authMember.address }" name="address" id="address"  size="45" style="border: 0 none #fff; float: left; margin-left: 10px;"></td>
-			
-			</tr>
-				<tr>
-				<td>간단소개</td>
-				<td>
-				
-				<textarea name="comments" id="comments" rows="6" style=" margin-left: 10px; line-height: 1; overflow:visible; ; font-size: 120%; width: 340px;">
-${authMember.comments}</textarea>
-				</td>
-			
-			</tr>
-			
-			</table>	
-			<input type="submit" value="업데이트" style="margin-left: 350px;">
-			</form>	
-						
-		
-	
+
+
+				<form action="" method="post"  enctype="multipart/form-data">
+					<input type="hidden" value="${authMember.no}" name="no" id="no">
+
+
+					사진 업로드 <input type="file" name="file" style="margin-left: 10px">
+					<input type="submit" value="업로드" style="margin-left: px;">
+
+				</form>
+
 			</div>
 
 	
 
 
 		</div>
-		
-		
 		<c:import url="/WEB-INF/views/include/navigation.jsp"></c:import>
 
 			<c:import url="/WEB-INF/views/include/extra.jsp"></c:import>
